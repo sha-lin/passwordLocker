@@ -7,5 +7,6 @@ class Credential:
         self.password = password
         self.email = email
 
-    def sa    
-        pass
+    def save_credentials(self):
+
+        Credential.credentials_array.append(self)
