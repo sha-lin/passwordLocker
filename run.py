@@ -89,4 +89,57 @@ def main():
             print(f"A new{account} has been created by {full_name}")
             print(f" The username is {user_name} and password {psword} ")
             print('\n')
-             
+
+        elif short_code == 'ac':
+            print("New user")
+            print("-" * 10)
+            print("Which type of account would you like to create?")
+            account = input()
+            print(f"You will have your {account} account created soon")
+
+            print("Name")
+            full_name = input()
+
+            print("email...")
+            email = input()
+
+            print("phone number..")
+            mobile_number = input()
+
+            print("Username..")
+            user_name = input()
+
+            p = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$"
+            psword = "".join(random.sample(p, 8))
+
+            save_user(create_user(full_name,email,mobile_number))
+            save_cred(create_credential(user_name,psword,email))
+            print('\n')
+            print(f"A new {account} will be created by {full_name}")
+            print(f"Username{user_name} password {psword} ")
+            print('\n')
+
+        elif short_code == 'da':
+
+            if display_user():
+                print("Here are your accounts")
+                print('\n')
+
+                for user in display_user():
+                    print(f"{user.full_name} has an account for {account}")
+
+                print('\n')
+            else:
+                print('\n')
+                print("You do not have an existing account")
+                print('\n')
+
+        elif short_code == 'ex':
+            print(":/ThankYou and Goodbye")
+            break
+        else:
+            print(":(No command allowed")
+
+
+if __name__ == '__main__':
+    main()
