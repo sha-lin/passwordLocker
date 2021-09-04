@@ -81,4 +81,6 @@ def main():
             user_name = input()
 
             print("enter password..")
-            psword = input()    
+            psword = input()
+
+            save_user(create_user(full_name,email,mobile_number))    
