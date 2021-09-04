@@ -15,4 +15,9 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_user.full_name,"Shalin Rono")
         self.assertEqual(self.new_user.email,"ronoshalin@gmail.com")
         self.assertEqual(self.new_user.mobile_number,"0701338496")
+
+    def test_save_user(self):
+
+        self.new_user.save_user_details()
+        self.assertEqual(len(User.user_array), 1)    
                 
