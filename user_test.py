@@ -30,5 +30,9 @@ class TestUser(unittest.TestCase):
 
     def test_display_all_users(self):
 
-        self.assertEqual(User.display_users(), User.user_array)      
+        self.assertEqual(User.display_users(), User.user_array) 
+
+
+if __name__ == '__main__':
+    unittest.main()             
                 
