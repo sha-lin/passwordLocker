@@ -67,4 +67,18 @@ def main():
             print("Please tell us which type of account you'd like to create")
             account = input()
             print(f"We will let you into your {account} in a few")
-                
+
+            print("Full name....")
+            full_name = input()
+
+            print("email...")
+            email = input()
+
+            print("mobile number...")
+            mobile_number = input()
+
+            print("input username...")
+            user_name = input()
+
+            print("enter password..")
+            psword = input()    
