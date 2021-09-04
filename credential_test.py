@@ -21,3 +21,11 @@ class TestUser(unittest.TestCase):
 
         self.new_credential.save_credentials()
         self.assertEqual(len(Credential.credentials_array), 1)
+
+    def test_display_credentials(self):
+
+        self.assertEqual(Credential.display_credentials(), Credential.credentials_array)
+
+if __name__ == '__main__':
+    unittest.main()
+
