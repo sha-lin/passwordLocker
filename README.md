@@ -13,7 +13,7 @@ Password Locker is an application that helps users to generate accounts and gene
 2. ac - Sign in to your account
 3. da - display all the accounts the user has
 3. Ex - Exit the application
-The user will be met with the following commands while signing in:
+
 
 ##  Guide to Use App
     First the app wil ask you to choose to create an account or to continue with an existing accounts
