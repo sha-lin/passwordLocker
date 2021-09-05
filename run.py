@@ -4,12 +4,18 @@ import random
 
 
 def create_user(fullname,email,mobilenumber):
+    """
+    This function generates username
+    """
 
     new_user = User(fullname,email,mobilenumber)
     return new_user
 
 
 def create_credential(username, psword, email):
+    """
+    This function generates credentials for a new user
+    """
 
     new_credential = Credential(username,psword,email)
     return new_credential    
@@ -20,9 +26,11 @@ def save_user(user):
     user.save_user_details()
 
 
-# def save_cred(credential):
-
-#     credential.save_credential()
+def save_cred(credential):
+    """
+    Saves users'credentials
+    """
+    credential.save_credential()
 
 
 def del_user(user):
@@ -114,7 +122,7 @@ def main():
             psword = "".join(random.sample(p, 8))
 
             save_user(create_user(full_name,email,mobile_number))
-            # save_cred(create_credential(user_name,psword,email))
+            save_cred(create_credential(user_name,psword,email))
             print('\n')
             print(f"A new {account} will be created by {full_name}")
             print(f"Username{user_name} password {psword} ")
@@ -136,7 +144,7 @@ def main():
                 print('\n')
 
         elif short_code == 'ex':
-            print(">>>ThankYou and Goodbye")
+            print(">>>ThankYou and Goodbye....")
             break
         else:
             print(":(No command allowed")
